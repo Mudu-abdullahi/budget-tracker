@@ -6,7 +6,6 @@
 
     <title>My Budget Tracker</title>
 
-    <!-- Link CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,37 +13,149 @@
 
     <!-- Page Header -->
     <header id="page-header">
+
+        <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
+            alt="Budget tracker icon"
+            width="80"
+        >
+
         <h1>My Budget Tracker</h1>
+
         <p>Track your income and expenses in one place.</p>
     </header>
 
 
     <!-- Add Expense Section -->
-    <section id="add-expense">
+    <section id="add-expense" class="add-expense-section">
+
         <h2>Add Expense</h2>
 
-        <input
-            type="text"
-            placeholder="Expense name"
-        >
+        <form>
 
-        <input
-            type="number"
-            placeholder="Amount"
-        >
+            <label for="expense-name">Expense Name:</label>
+            <input
+                type="text"
+                id="expense-name"
+                name="expense-name"
+                placeholder="Enter expense name"
+            >
 
-        <input
-            type="text"
-            placeholder="Category"
-        >
+            <label for="expense-amount">Amount:</label>
+            <input
+                type="number"
+                id="expense-amount"
+                name="expense-amount"
+                placeholder="Enter amount"
+            >
+
+            <label for="expense-category">Category:</label>
+
+            <select
+                id="expense-category"
+                name="expense-category"
+            >
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Rent">Rent</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <button type="button">Add Expense</button>
+
+        </form>
+
     </section>
 
 
     <!-- Your Expenses Section -->
-    <section id="your-expenses">
+    <section id="your-expenses" class="expenses-section">
+
         <h2>Your Expenses</h2>
 
-        <p>No expenses yet.</p>
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Lunch</td>
+                    <td>$12</td>
+                    <td>Food</td>
+                    <td>2026-08-20</td>
+                </tr>
+
+                <tr>
+                    <td>Bus Fare</td>
+                    <td>$5</td>
+                    <td>Transport</td>
+                    <td>2026-08-21</td>
+                </tr>
+
+                <tr>
+                    <td>Movie</td>
+                    <td>$15</td>
+                    <td>Entertainment</td>
+                    <td>2026-08-22</td>
+                </tr>
+
+                <tr>
+                    <td>Groceries</td>
+                    <td>$35</td>
+                    <td>Food</td>
+                    <td>2026-08-23</td>
+                </tr>
+
+                <tr>
+                    <td>Rent</td>
+                    <td>$300</td>
+                    <td>Rent</td>
+                    <td>2026-08-24</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- How To Use Section -->
+    <details>
+
+        <summary>How to use this tracker</summary>
+
+        <p>
+            Enter the name and amount of your expense, then select a
+            category from the dropdown. Click the Add Expense button.
+            The button will become functional in a future version.
+        </p>
+
+    </details>
+
+
+    <!-- Budget Video Section -->
+    <section id="budget-video">
+
+        <h2>Budgeting Tips</h2>
+
+        <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/ZvDI1IDfBkE"
+    title="Budget Tracker Video"
+    frameborder="0"
+    allowfullscreen>
+</iframe>
     </section>
 
 </body>
